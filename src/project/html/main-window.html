@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблонизатор документов</title>
+
+    <link rel="stylesheet" href="../../../dist/minified/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Roboto:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header header_size-m-lightblue">
+        <span class="header__title header__title_center-left">
+            Шаблонизатор документов
+            <i style="margin: 5px" class="ri-file-line"></i>
+        </span>
+        <div class="switcher header__switcher_right-bottom">
+            <div class="switcher__item"><i class="ri-file-edit-line ri-2x"></i></div>
+            <div class="switcher__item"><i class="ri-file-word-line ri-2x"></i></div>
+        </div>
+    </header>
+    <main class="">
+        <div class="document-container document-container_central-gray">            
+            <div class="document-container__item document-container__item_line-after document-container__item_center">
+
+                <ol class="ol-edit-project">
+                </ol>
+
+                <select name="" class="select select_white">
+                    <option selected hidden value="addElement">Добавить элемент</option>
+                    <option value="h1">Заголовок первого уровня</option>
+                    <option value="h2">Заголовок второго уровня</option>
+                    <option value="text">Текст</option>
+                    <option value="img">Изображение</option>
+                </select>
+            </div>
+            <div class="document-container__item">
+                <input class="list-item-input list-item-input_simple">
+                <input class="list-item-input list-item-input_simple">
+                <input class="list-item-input list-item-input_simple">
+            </div>
+        </div>
+        <!-- <div class="document-container document-container_central-gray"></div> -->
+    </main>     
+
+    <script src="../../../dist/unminified/index.js"></script>
+</body>
+
+</html>

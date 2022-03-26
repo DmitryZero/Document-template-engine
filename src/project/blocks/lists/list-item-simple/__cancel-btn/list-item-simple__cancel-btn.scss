@@ -1,0 +1,15 @@
+.list-item-simple__cancel-btn {
+    flex-basis: fit-content;
+
+    transition: transform 0.3s ease-out;
+    border-radius: 4px;
+
+    &:hover {
+        color: gold;
+
+        transform: translate(0, -5px);
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+}

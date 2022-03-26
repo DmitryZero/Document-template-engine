@@ -1,0 +1,121 @@
+.document-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.document-container::before {
+  content: "";
+  border: 0.5px solid black;
+  border-image: linear-gradient(45deg, #3f51b5, #cddc39) 1;
+  align-self: stretch;
+}
+.header {
+  position: relative;
+}
+.select {
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Lobster";
+}
+.switcher {
+  display: flex;
+  flex-direction: row;
+}
+.document-container_central-gray {
+  width: 95%;
+  margin: 10px auto;
+  padding: 20px;
+  overflow: auto;
+  background-color: #f8ecec;
+  border-radius: 5px;
+}
+.document-container__item {
+  flex: 1;
+}
+.header_size-m-lightblue {
+  height: 20vh;
+  background-color: lightblue;
+}
+.header__title {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: italic;
+}
+
+.list-item-simple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.select_white {
+  width: 40%;
+  height: fit-content;
+  outline: none;
+  border: 1.5px solid black;
+  box-shadow: 2px 2px 1px gray;
+}
+.select_white:focus {
+  outline: none;
+  border-color: #0077FF;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+.switcher__item {
+  flex: 1 auto;
+  margin: 1px;
+  transition: transform 0.3s ease-out;
+  border-radius: 4px;
+}
+.switcher__item:hover {
+  color: gold;
+  background-color: gray;
+  transform: translate(0, -5px);
+}
+.switcher__item:active {
+  transform: translateY(2px);
+}
+.document-container__item_center {
+  text-align: center;
+}
+.document-container__item_line-after {
+  order: -1;
+}
+.header__title_center-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  margin-left: 10px;
+}
+.header__switcher_right-bottom {
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+}
+.list-item-simple__cancel-btn {
+  flex-basis: fit-content;
+  transition: transform 0.3s ease-out;
+  border-radius: 4px;
+}
+.list-item-simple__cancel-btn:hover {
+  color: gold;
+  transform: translate(0, -5px);
+}
+.list-item-simple__cancel-btn:active {
+  transform: translateY(2px);
+}
+.list-item-simple__text {
+  flex: 1;
+  text-align: start;
+  padding-left: 5px;
+  font-size: 18px;
+}
+.switcher__item_selected {
+  background-color: chocolate;
+}
+.list-item-input_simple {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 18px;
+}
