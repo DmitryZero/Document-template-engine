@@ -23,45 +23,62 @@
 
         body {
             margin: 0;
+
+            counter-reset: esum;
+        }
+
+        .esum {
+            counter-increment: esum;
+        }
+
+        .esum::before {
+            content: counter(esum)".";
         }
     </style>
 </head>
 <body>
-    <header class="header header_size-m-lightblue">
-        <span class="header__title header__title_center-left">
+    <header class="header header--size-m-lightblue">
+        <span class="header__title header__title--center-left">
             Шаблонизатор документов
             <i style="margin: 5px" class="ri-file-line"></i>
         </span>
-        <div class="switcher header__switcher_right-bottom">
+        <div class="switcher header__switcher--right-bottom" data-params=".document-container">
             <div class="switcher__item"><i class="ri-file-edit-line ri-2x"></i></div>
             <div class="switcher__item"><i class="ri-file-word-line ri-2x"></i></div>
         </div>
     </header>
-    <main class="">
-        <div class="document-container document-container_central-gray">            
-            <div class="document-container__item document-container__item_line-after document-container__item_center">
+    <main>
+        
+        <div data-type-of-document="edit" 
+             class="document-container
+                    document-container--central-gray
+                    grid-container
+                    grid-container--2-columns
+                    grid-container--vertical-central-line
+                    visually-hidden">
 
-                <ol class="ol-edit-project">
-                </ol>
 
-                <select name="" class="select select_white">
-                    <option selected hidden value="addElement">Добавить элемент</option>
-                    <option value="h1">Заголовок первого уровня</option>
-                    <option value="h2">Заголовок второго уровня</option>
-                    <option value="text">Текст</option>
-                    <option value="img">Изображение</option>
-                </select>
-            </div>
-            <div class="document-container__item">
-                <input class="list-item-input list-item-input_simple">
-                <input class="list-item-input list-item-input_simple">
-                <input class="list-item-input list-item-input_simple">
-            </div>
+                    <select name="" class="select select--white">
+                        <option selected hidden value="addElement">Добавить элемент</option>
+                        <option value="h1">Заголовок первого уровня</option>
+                        <option value="h2">Заголовок второго уровня</option>
+                        <option value="p">Текст</option>
+                        <option value="img">Изображение</option>
+                    </select>
+
+                    <button>
+                        Вывести на печать
+                    </button>
+        </div>        
+        <div data-type-of-document="ready" 
+            class="document-container
+                   document-container--central-gray
+                   visually-hidden">
         </div>
-        <!-- <div class="document-container document-container_central-gray"></div> -->
     </main>     
 
     <script src="../../../dist/unminified/index.js"></script>
 </body>
 
 </html>
+

@@ -1,0 +1,21 @@
+.select {
+    padding: 10px;
+
+    font-size: 16px;
+    font-family: "Lobster";
+
+    &--white {
+        width: 40%;    
+        height: fit-content;
+    
+        outline: none;
+        border: 1.5px solid black;
+        box-shadow: 2px 2px 1px gray;
+    
+        &:focus{
+          outline: none;
+          border-color: #0077FF;
+          box-shadow: 0 0 0 2px rgba(#0077FF,.2);
+        }
+    }
+}

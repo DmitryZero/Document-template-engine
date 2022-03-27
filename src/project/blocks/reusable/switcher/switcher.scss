@@ -1,0 +1,28 @@
+.switcher {
+    display: flex;
+    flex-direction: row;
+
+    &__item {
+        flex: 1 auto;
+    
+        margin: 1px;
+    
+        transition: transform 0.3s ease-out;
+        border-radius: 4px;
+    
+        &:hover {
+            color: gold;
+            background-color: gray;
+    
+            transform: translate(0, -5px);
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+
+        &--selected {
+            background-color: chocolate;
+        }
+    }
+    
+}

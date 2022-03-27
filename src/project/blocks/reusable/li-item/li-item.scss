@@ -1,0 +1,40 @@
+.li-item {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    font-size: 18px;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: gold;
+    }
+
+    &__number {
+        flex-basis: fit-content;
+    }
+
+    &__text {
+        flex: 1;
+        text-align: start;
+        padding-left: 5px;
+        
+    }
+
+    &__cancel-btn {
+        flex-basis: fit-content;
+    
+        transition: transform 0.3s ease-out;
+        border-radius: 4px;
+    
+        &:hover {
+            color: red;
+    
+            transform: translate(0, -5px);
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+}
