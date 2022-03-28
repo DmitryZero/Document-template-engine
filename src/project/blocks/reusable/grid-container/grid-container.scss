@@ -1,5 +1,12 @@
 .grid-container {
-    display: grid;
+
+    @media screen {
+        display: grid; 
+    }
+       
+    @media print {
+        display: none;
+    }
 
     &__item {
         width: 95%;

@@ -1,6 +1,10 @@
 .header {
     position: relative;
 
+    @media print {
+        display: none;
+    }
+
     &__switcher {
 
 

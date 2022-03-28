@@ -24,26 +24,38 @@ for (let i = 0; i < selects.length; i++) {
             bindedItem.remove();
         });
 
+        let documentToPrint = document.querySelector('[data-type-of-document="ready"]');
+        let bindedItem = document.createElement(selects[i].value);  
         let form;
         switch (selects[i].value) {
             case 'h1':
-            case 'h2':
+            case 'h2':            
+                form = document.createElement('input');
+                form.setAttribute('type', 'text');
+                form.classList.add('input-form-simple', 'grid-container__item');
+
+                form.addEventListener('change', () => {
+                    bindedItem.innerHTML = form.value;
+                });
+                break;
             case 'img':
                 form = document.createElement('input');
                 form.setAttribute('type', 'text');
                 form.classList.add('input-form-simple', 'grid-container__item');
+
+                form.addEventListener('change', () => {
+                    bindedItem.setAttribute('src', form.value);
+                });
                 break;
             case 'p':
                 form = document.createElement('textarea');
                 form.classList.add('textarea-form-simple', 'grid-container__item');
+
+                form.addEventListener('change', () => {
+                    bindedItem.innerHTML = form.value.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                });
                 break;
-        }
-        
-        let documentToPrint = document.querySelector('[data-type-of-document="ready"]');
-        let bindedItem = document.createElement(selects[i].value);        
-        form.addEventListener('change', () => {
-            bindedItem.innerHTML = form.value;
-        });
+        }                          
         documentToPrint.append(bindedItem);
 
         editorContainer.insertBefore(li, selectElement);
